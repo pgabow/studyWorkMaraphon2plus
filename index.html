@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles.css" />
+      <title>Drag & Drop | Проект 2</title>
+   </head>
+   <body>
+      <div id="tasks">
+         <form class="create-task-block">
+            <input
+               name="taskName"
+               class="create-task-block__input default-text-input"
+               type="text"
+               placeholder="Создайте новую задачу"
+               value=""
+            />
+            <button
+               type="submit"
+               class="create-task-block__button default-button"
+            >
+               +
+            </button>
+         </form>
+      </div>
+      <div class="body">
+         <div>
+            <div class="row">
+               <div class="col-header start">Начать</div>
+               <div class="col-header progress">В процессе</div>
+               <div class="col-header done">Готовы</div>
+            </div>
+
+            <div class="row">
+               <div class="placeholder"></div>
+               <div class="placeholder"></div>
+               <div class="placeholder"></div>
+            </div>
+         </div>
+      </div>
+      <script src="index.js"></script>
+   </body>
+</html>

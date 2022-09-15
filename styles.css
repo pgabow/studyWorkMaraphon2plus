@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+* {
+   box-sizing: border-box;
+   user-select: none;
+}
+body {
+   font-family: 'Roboto', sans-serif;
+   background-color: #e5e5e5;
+   padding-top: 5rem;
+   justify-content: center;
+   overflow: hidden;
+   margin: 0;
+}
+#tasks {
+   text-align: center;
+   margin: 0 auto;
+}
+.body {
+   background-color: transparent;
+   display: flex;
+   padding-top: 5rem;
+   justify-content: center;
+   overflow: hidden;
+   margin: 0;
+}
+
+.row {
+   display: flex;
+   width: 600px;
+   justify-content: space-between;
+   margin-bottom: 1rem;
+}
+
+.col-header {
+   text-align: center;
+   width: 150px;
+   box-shadow: 4px 4px 9px rgba(198, 198, 198, 0.36);
+   border-radius: 20px;
+   padding: 0.8rem 1rem;
+   color: #757575;
+   border: 1px solid #838996;
+}
+
+.item {
+   position: relative;
+   margin: 4px auto;
+   width: 140px;
+   border: 1px solid #000;
+   border-radius: 8px;
+   box-shadow: 2px 0 8px 4px rgba(198, 198, 198, 0.5);
+   background: #d3d4d7;
+   padding: 0.8rem 1rem;
+   color: #757575;
+   text-align: center;
+   cursor: grab;
+   word-wrap: break-word;
+   overflow: hidden;
+}
+
+.item:active {
+   cursor: grabbing;
+}
+
+.placeholder {
+   overflow: auto;
+   width: 160px;
+   height: 300px;
+   border: 1px solid #838996;
+   box-shadow: 4px 4px 24px 4px rgba(198, 198, 198, 1);
+   border-radius: 5px;
+}
+.start {
+   background: linear-gradient(90deg, #838996 -100%, #e5e5e5 100%);
+}
+.progress {
+   background: #e5e5e5;
+}
+.done {
+   background: linear-gradient(90deg, #e5e5e5 0%, #838996 200%);
+}
+.hold {
+   opacity: 0.7;
+}
+
+.cursor {
+   cursor: pointer;
+}
+.hide {
+   display: none;
+}
+
+/*input*/
+
+.default-text-input {
+   text-align: center;
+   border: 1px solid #838996;
+   border-radius: 5px;
+   background: linear-gradient(90deg, #838996 -100%, #e5e5e5 100%);
+   height: 25px;
+}
+
+/*button*/
+.default-button {
+   margin-left: 10px;
+   text-align: center;
+   cursor: pointer;
+   width: 25px;
+   height: 25px;
+   border-radius: 50px;
+   border: 1px solid #838996;
+   background-color: #e5e5e5;
+   color: #757575;
+}
+
+.button-close-task {
+   position: absolute;
+}
+
+/*close*/
+.button-close-task {
+   position: absolute;
+   top: -28px;
+   right: 0;
+
+   width: 20px;
+   height: 70px;
+
+   border: 1px solid #838996;
+   padding: 10px;
+   cursor: pointer;
+   background-color: #b6b9bf;
+   transform: rotate(-45deg);
+}
+
+.button-correct-task {
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   position: absolute;
+   top: -28px;
+   left: 0;
+   width: 20px;
+   height: 70px;
+   border: 1px solid #838996;
+   cursor: pointer;
+   background-color: #b6b9bf;
+   transform: rotate(45deg);
+}
+
+.span-correct-task {
+   color: #757575;
+}
+
+.button-close-task::before,
+.button-close-task::after {
+   content: '';
+   position: absolute;
+
+   right: 5px;
+   left: 3px;
+   width: 10px;
+   height: 1px;
+
+   background-color: #838996;
+}
+
+.button-close-task::before {
+   /*transform: rotate(45deg);*/
+}
+
+.button-close-task::after {
+   transform: rotate(-90deg);
+}
+
+.button-close-task:focus {
+   outline: none;
+}
+
+.visually-hidden:not(:focus),
+.visually-hidden:not(:active) {
+   position: absolute;
+   left: 0;
+
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+
+   border: 0;
+   padding: 0;
+
+   white-space: nowrap;
+
+   clip-path: inset(100%);
+   clip: rect(0 0 0 0);
+   overflow: hidden;
+}
